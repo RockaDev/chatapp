@@ -1,0 +1,10 @@
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }} m-2" id="msg" role="alert" style="background-color: red;color: white;font-weight: 40;font-size: 17px;">
+            {{ message }}
+            <div class="close-btn" id='close-btn' onclick="document.getElementById('msg').style.display = 'none';document.getElementById('close-btn').style.display = 'none';" style="width: 10px;height:1px;cursor: pointer;background-color: black;margin-left: 100vh;position: absolute;top: 10px;" ></div>
+            
+        </div>
+        
+    {% endfor %}
+{% endif %} 
