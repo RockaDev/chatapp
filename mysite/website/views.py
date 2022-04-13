@@ -76,10 +76,10 @@ def send(request):
    room_id = request.POST['room_id']
 
    banned_words = [
-      'nigga',
-      'fuck',
-      'bitch',
-      'dick',
+      'test1',
+      'test2',
+      'test3',
+      'test4',
    ]
 
    if request.method == 'POST':
@@ -88,19 +88,19 @@ def send(request):
             pass
 
       elif message == banned_words[0]:
-            changed_text = ['Black Lives Matter!','Slnko je moja spriazniva vasen!', 'Som debilko X:D.']
+            changed_text = ['Banned word.','Banned word.', 'Banned word.']
             changed_message = random.choice(changed_text)
             new_changed_message = Message.objects.create(value=changed_message,user=username,room=room_id)
             new_changed_message.save()
 
       elif message == banned_words[1]:
-            changed_text = ['I am gay','som deges more','Vcera som pojebal macku do riti']
+            changed_text = ['Banned word.','Banned word.','Banned word.']
             changed_message = random.choice(changed_text)
             new_changed_message = Message.objects.create(value=changed_message,user=username,room=room_id)
             new_changed_message.save()
 
       elif message == banned_words[2] or message == banned_words[3]:
-            changed_text = ['Fuck me in the ass.','Im a bitch. :-)','SOM KOKOT XD!']
+            changed_text = ['Banned word.','Banned word.','Banned word.']
             changed_message = random.choice(changed_text)
             new_changed_message = Message.objects.create(value=changed_message,user=username,room=room_id)
             new_changed_message.save()
