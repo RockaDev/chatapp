@@ -37,10 +37,10 @@ def checkview(request):
    error_message = 'Message 3 char long!'
 
    banned_words = [
-      'nigga',
-      'fuck',
-      'bitch',
-      'dick'
+      'test1',
+      'test2',
+      'test3',
+      'test4'
    ]
 
    if request.method == 'POST':
